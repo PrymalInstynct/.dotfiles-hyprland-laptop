@@ -1,0 +1,114 @@
+format = """
+[](#9900ff)\
+[✘✘](bold #000000 bg:#9900ff)\
+[](bg:#000000 fg:#9900ff)\
+$directory\
+[](fg:#000000 bg:#bfbfbf)\
+$git_branch\
+$git_status\
+[](fg:#bfbfbf bg:#000000)\
+[$nodejs](bg:#000000)\
+[$rust](bg:#000000)\
+[$cmake](bg:#000000)\
+[$java](bg:#000000)\
+[$python](bg:#000000)\
+[$golang](bg:#000000)\
+[](fg:#000000 bg:#9900ff)\
+$time\
+[ ](fg:#9900ff)\
+"""
+
+right_format = """
+$status\
+$cmd_duration\
+"""
+
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+command_timeout = 900
+
+[status]
+style = "bold #000000 bg:#9900ff "
+symbol = "✗ "
+format = '[](fg:#9900ff)[$symbol$common_meaning$signal_name$maybe_int ]($style)[](fg:#9900ff bg:#000000)'
+map_symbol = true
+disabled = false
+
+[cmd_duration]
+style = "bold #9900ff bg:#000000"
+min_time = 1000
+format = "[  $duration]($style)[](fg:#000000)"
+
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+style_user = "bold #cccccc bg:#9900ff"
+style_root = "bold #cccccc bg:#9c1717"
+format = 'user: [$user]($style) '
+disabled = false
+show_always = true
+
+[directory]
+style = "bold #9900ff bg:#000000"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = " 󰈙 "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
+
+[git_branch]
+symbol = ""
+style = "bold #000000 bg:#bfbfbf"
+format = '[[ $symbol $branch ](bold #000000 bg:#bfbfbf)]($style)'
+
+
+[git_status]
+style = "bold #000000 bg:#bfbfbf"
+format = '[[($all_status$ahead_behind )](bold #000000 bg:#bfbfbf)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bold #9900ff bg:#000000"
+format = '[[ $symbol ($version) ](bg:#000000)]($style)'
+
+[rust]
+symbol = ""
+style = "bold #9900ff bg:#000000"
+format = '[[ $symbol ($version) ](bg:#9900ff)]($style)'
+
+[golang]
+style = "bold #9900ff bg:#000000"
+format = "[via $symbol($version )]($style)"
+
+
+[python]
+style = "bold #9900ff bg:#000000"
+format = '[via ${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+#pyenv_version_name = true
+
+[java]
+style = "bold #9900ff bg:#000000"
+symbol = " "
+format = "[via $symbol[$version](bold #9900ff bg:#000000)]($style)"
+
+
+[cmake]
+style = "bold #9900ff bg:#000000"
+
+[time]
+disabled = false
+use_12hr = true
+time_format = "%R" # Hour:Minute Format
+style = "bold #ffffff bg:#9900ff"
+format = '[[ 󰅒 $time ](#ffffff bg:#9900ff)]($style)'

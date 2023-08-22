@@ -1,0 +1,97 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 16px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(21, 18, 27, 0);
+    color: #cdd6f4;
+}
+
+tooltip {
+    background: #1e1e2e;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #11111b;
+}
+
+#workspaces button {
+    padding: 5px;
+    color: #313244;
+    margin-right: 5px;
+}
+
+#workspaces button.active {
+    color: #a6adc8;
+}
+
+#workspaces button.focused {
+    color: #a6adc8;
+    background: #eba0ac;
+    border-radius: 10px;
+}
+
+#workspaces button.urgent {
+    color: #11111b;
+    background: #a6e3a1;
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    background: #11111b;
+    color: #cdd6f4;
+    border-radius: 10px;
+}
+
+#custom-weather,
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#temperature,
+#taskbar,
+#workspaces,
+#cpu,
+#memory,
+#disk,
+#tray,
+#backlight {
+    background: #1e1e2e;
+    color: #c7c7c7;
+    opacity: 0.8;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-radius: 10px;
+    border: 1px solid #181825;
+}
+
+#temperature.critical {
+    color: #eba0ac;
+}
+
+#workspaces {
+    border-radius: 10px;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+#window {
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+#battery.critical {
+    color: #eba0ac;
+}
