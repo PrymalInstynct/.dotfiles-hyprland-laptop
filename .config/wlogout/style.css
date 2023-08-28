@@ -18,13 +18,21 @@
         border-radius: 25% / 15%;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 50%;
-        margin: 50px;
+        background-size: 30%;
+        margin: 35px;
+        box-shadow: none;
+        text-shadow: none;
+        animation: gradient_f 20s ease-in infinite;
     }
 
     button:active, button:hover {
         background-color: #a64d79;
         outline-style: none;
+        background-size: 50%;
+        border-radius: 15% / 5%;
+        animation: gradient_f 20s ease-in infinite;
+        transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
+        margin: 10px
     }
 
     #lock {
