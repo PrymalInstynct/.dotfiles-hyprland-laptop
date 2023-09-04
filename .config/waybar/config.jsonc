@@ -7,13 +7,13 @@
     "gtk-layer-shell": true,
     "height": 40,
     "modules-left": ["clock", "custom/weather", "wlr/taskbar", "hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
+    "modules-center": ["hyprland/windhyprlandow"],
     "modules-right": ["cpu", "memory", "disk", "temperature", "backlight", "network", "pulseaudio", "battery"],
     "hyprland/window": {
         "format": "{}"
     },
 
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "on-click": "activate",
